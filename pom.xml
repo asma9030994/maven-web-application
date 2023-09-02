@@ -97,7 +97,7 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>rbsbank release Nexus Repository</name>
-	      <url>/</url>http://13.208.251.4:8081/repository/rbsbank-release/</url>
+	      <url>http://13.208.251.4:8081/repository/rbsbank-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
