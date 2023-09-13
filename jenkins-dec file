@@ -1,0 +1,11 @@
+pipeline{
+  agent any 
+    stages{
+    stage("git integration"){
+      steps{
+         git 'https://github.com/asma9030994/maven-web-application.git'
+      }
+    }   
+  }        
+}  
+  
