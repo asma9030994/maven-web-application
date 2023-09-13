@@ -1,23 +1,5 @@
 pipeline{
   agent any
-     environment{
-       PATH="/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven-3.9.4/bin:$PATH"
-  }
-    stages{
-    stage("git integration"){
-      steps{
-         git 'https://github.com/asma9030994/maven-web-application.git'
-      }
-    }
-    stage("build"){
-      steps{
-        sh "mvn clean install package"
-      }
-    }
-   stage("code analysis"){
-      steps
-       pipeline{
-  agent any
 environment{
 PATH="/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3.9.4/bin:$PATH"
 }
@@ -41,9 +23,6 @@ sh "mvn sonar:sonar"
 }
 }
 }
-
-
-
 }
 
 
