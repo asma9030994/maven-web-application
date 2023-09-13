@@ -6,7 +6,7 @@ PATH="/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3.9.4/bin
     stages{
     stage("git integration"){
       steps{
-        git 'https://github.com/bhavanishankarveerla/maven-web-application.git'
+        git 'https://github.com/asma9030994/maven-web-application.git'
         
       }
     }
