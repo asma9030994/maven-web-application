@@ -26,7 +26,7 @@ stage("artifacts uploader"){
    nexusArtifactUploader artifacts: [[artifactId: 'maven-web-application', classifier: '', file: 'target/maven-web-application.war', type: 'war']], credentialsId: 'nexus-passwd', groupId: 'com.mt', nexusUrl: '13.208.206.208:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'RBS-snapshot', version: '0.0.1-SNAPSHOT'
  }
 }
-stage{"Deploy"){
+stage("Deploy"){
  steps{
     deploy adapters: [tomcat9(credentialsId: 'Tomcat-passwd', path: '', url: 'http://15.152.38.45:8080/')], contextPath: null, war: '**/*.war'
  }
