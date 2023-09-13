@@ -1,12 +1,12 @@
 pipeline{
   agent any
 environment{
-PATH="/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3.9.4/bin:$PATH"
+ PATH= "/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven-3.9.4/bin:$PATH"
 }
-    stages{
+stages{
     stage("git integration"){
       steps{
-         git credentialsId: 'ba27e6d1-8dac-4b51-af4e-007421fac11f', url: 'https://github.com/asma9030994/maven-web-application.git'
+        git 'https://github.com/asma9030994/maven-web-application.git' 
     }
     }
 stage("build"){
